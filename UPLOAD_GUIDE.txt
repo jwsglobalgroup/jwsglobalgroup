@@ -1,0 +1,23 @@
+JWS Global Group｜HTML 靜態網站上架說明
+
+這一份是已經建置完成的網站，不需要安裝 Node.js，也不需要 GitHub Actions。
+
+1. 在 GitHub 建立一個新的空白 Public repository。
+2. 打開本資料夾，將裡面的全部內容上傳到 repository 最外層。
+   請確認 index.html、assets、_next、CNAME 都直接位於 repository 根目錄。
+3. 前往 Settings → Pages。
+4. Build and deployment 的 Source 選擇 Deploy from a branch。
+5. Branch 選 main，資料夾選 / (root)，再按 Save。
+6. 在 Custom domain 填入 jwsglobalgroup.com 並儲存。
+7. 到遠振 DNS 後台新增四筆 @ 的 A 記錄：
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+8. DNS Check 成功後，勾選 Enforce HTTPS。
+
+注意：
+- 不要直接把 ZIP 檔當成網站上傳；請先解壓縮。
+- 不要在 repository 裡多包一層 JWS_Global_Group_HTML_Deploy 資料夾。
+- GitHub 網頁一次最多上傳 100 個檔案；本包已整理在限制以內。
+- 網域正式生效前，project repository 的暫時網址可能不會正確載入根目錄資源，請完成 Custom domain 與 DNS 後再做最終確認。
